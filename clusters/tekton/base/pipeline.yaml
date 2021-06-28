@@ -74,3 +74,5 @@ spec:
           value: .$(params.yamlField)=\"$(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)\"
         - name: IMAGE
           value: $(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)
+        - name: BRANCH
+          value: $(params.gitRevision)
