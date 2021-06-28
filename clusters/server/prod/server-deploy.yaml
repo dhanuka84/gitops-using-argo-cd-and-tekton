@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: server
-          image: dhanuka84/gitops-using-argo-cd-and-tekton:dev-791197384c038ca4c3baadd44072dae7020dc2f8
+          image: dhanuka84/gitops-using-argo-cd-and-tekton:dev-c7ec5c4f06f5611a8099159115cdc72462a5ebcc
