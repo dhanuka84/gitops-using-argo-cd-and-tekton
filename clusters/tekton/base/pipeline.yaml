@@ -31,6 +31,7 @@ spec:
     - name: yamlField
       description: Field which should be updated
       type: string
+    
   tasks:
     - name: clone-repo
       taskRef:
@@ -70,6 +71,6 @@ spec:
         - name: FILE_PATH
           value: $(params.filePath)
         - name: YAML_FIELD
-          value: $(params.yamlField)
+          value: $(params.yamlField)="$(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)"
         - name: IMAGE
           value: $(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)
