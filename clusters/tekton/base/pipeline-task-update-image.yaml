@@ -27,8 +27,8 @@ spec:
       privileged: true
     script: |
       cd $(workspaces.source.path)/gitops-using-argo-cd-and-tekton
-      git config --global user.email "mail@ricoberger.de"
-      git config --global user.name "ricoberger"
+      git config --global user.email "dhanuka.priyanath@gmail.com"
+      git config --global user.name "dhanuka84"
       git add $(params.FILE_PATH)
       MESSAGE="Automated commit by Tekton: $(params.SERVICE_NAME): $(params.IMAGE)"
       git commit -m "$MESSAGE"
