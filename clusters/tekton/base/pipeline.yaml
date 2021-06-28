@@ -10,20 +10,27 @@ spec:
   params:
     - name: gitUrl
       description: Git repository url
+      type: string
     - name: gitRevision
       description: Git revision to check out
+      type: string
       default: main
     - name: pathToContext
       description: The path to the build context, used by Kaniko - within the workspace
+      type: string
       default: gitops-using-argo-cd-and-tekton
     - name: imageUrl
       description: Image name including repository
+      type: string
     - name: serviceName
       description: Name of the service which is updated
+      type: string
     - name: filePath
       description: Path to the yaml file which should be updated
+      type: string
     - name: yamlField
       description: Field which should be updated
+      type: string
   tasks:
     - name: clone-repo
       taskRef:
