@@ -14,7 +14,7 @@ spec:
     - name: gitRevision
       description: Git revision to check out
       type: string
-      default: main
+      default: dev
     - name: pathToContext
       description: The path to the build context, used by Kaniko - within the workspace
       type: string
@@ -74,5 +74,3 @@ spec:
           value: .$(params.yamlField)=\"$(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)\"
         - name: IMAGE
           value: $(params.imageUrl):$(params.gitRevision)-$(tasks.clone-repo.results.commit)
-        - name: BRANCH
-          value: $(params.gitRevision)
