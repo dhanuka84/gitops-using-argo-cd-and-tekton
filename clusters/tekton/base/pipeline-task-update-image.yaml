@@ -20,7 +20,7 @@ spec:
     securityContext:
       privileged: true
     script: |
-      yq eval  $(workspaces.source.path)/gitops-using-argo-cd-and-tekton/$(params.FILE_PATH) $(params.YAML_FIELD) $(params.IMAGE)
+      yq eval '$(workspaces.source.path)/gitops-using-argo-cd-and-tekton/$(params.FILE_PATH)' $(params.YAML_FIELD) $(params.IMAGE)
   - name: git-push
     image: gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/git-init:v0.12.1
     securityContext:
